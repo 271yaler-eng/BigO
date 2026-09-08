@@ -36,6 +36,13 @@ public class BigO{
         }
         
         findTheBlank(theNumbers, num + 1);
+        for(int i = 0; i < theNumbers.length; i++) {
+            for(int j = 0; j < theNumbers.length; j++) {
+                if(theNumbers[j] < theNumbers[i]) {
+                    theNumbers[j] = theNumbers[i];
+                }
+            }
+        }
         if(found) {
         System.out.println("Missing number = " + missingNumber + 
             " at location " + blankSpace +" of the array");
